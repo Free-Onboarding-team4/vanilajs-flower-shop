@@ -8,19 +8,13 @@
           box-sizing: border-box;
 }
 
-html {
+html,
+body {
   height: 100%;
 }
 
 body {
-  font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
-  display: -webkit-box;
-  display: flex;
-  display: -ms-flexbox;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
 }
 
 ul,
@@ -67,10 +61,4 @@ textarea {
   height: 1px;
   margin: -1px;
   overflow: hidden;
-}
-
-iframe {
-  border: 1px solid #000;
-  width: 100%;
-  height: 100vh;
 }
