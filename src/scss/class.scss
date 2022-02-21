@@ -1,3 +1,6 @@
+@import './variables';
+@import './mixins';
+
 section {
   margin-top: 90px;
 }
@@ -26,9 +29,9 @@ section {
 
   .btn-more {
     font-size: 14px;
-    color: #787878;
+    color: $textLightColor;
     &:hover {
-      color: #ffcd32;
+      color: $mainColor;
     }
   }
 }
@@ -43,13 +46,12 @@ section {
 }
 
 .main-class {
+  @include bgCenter(
+    'https://kukka-2-media-123.s3.amazonaws.com/media/class-name/ContentsTopBanner/3/class_2022_home_mob_okfoQzB.jpeg'
+  );
   position: relative;
   display: inline-block;
   margin-right: 20px;
-  background-image: url('https://kukka-2-media-123.s3.amazonaws.com/media/class-name/ContentsTopBanner/3/class_2022_home_mob_okfoQzB.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 
   .main-class-txt {
     position: absolute;
@@ -88,9 +90,6 @@ section {
       display: block;
       width: 100%;
       height: 170px;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
       transition: transform 0.2s ease-in-out;
       &:hover {
         transform: scale(1.1);
@@ -99,11 +98,15 @@ section {
   }
 
   &:first-child .thumbnail span {
-    background-image: url('https://kukka-2-media-123.s3.amazonaws.com/media/class-name/ClassProductGroup/106/img_%EC%98%A4%EC%95%84%EC%8B%9C%EC%8A%A4-%EB%A6%AC%EC%8A%A4.jpg');
+    @include bgCenter(
+      'https://kukka-2-media-123.s3.amazonaws.com/media/class-name/ClassProductGroup/106/img_%EC%98%A4%EC%95%84%EC%8B%9C%EC%8A%A4-%EB%A6%AC%EC%8A%A4.jpg'
+    );
   }
 
   &:last-child .thumbnail span {
-    background-image: url('https://kukka-2-media-123.s3.amazonaws.com/media/class-name/ClassProductGroup/107/img_%ED%81%B4%EB%9E%98%EC%8B%9D-%ED%95%B8%EB%93%9C%ED%83%80%EC%9D%B4%EB%93%9C.jpg');
+    @include bgCenter(
+      'https://kukka-2-media-123.s3.amazonaws.com/media/class-name/ClassProductGroup/107/img_%ED%81%B4%EB%9E%98%EC%8B%9D-%ED%95%B8%EB%93%9C%ED%83%80%EC%9D%B4%EB%93%9C.jpg'
+    );
   }
 }
 
@@ -151,29 +154,10 @@ section {
   }
 }
 
-.tag.tag-ghm {
-  border-color: #a27fde;
-  color: #a27fde;
-}
-.tag.tag-js {
-  border-color: #46cfa7;
-  color: #46cfa7;
-}
-.tag.tag-wg {
-  border-color: #ffa04d;
-  color: #ffa04d;
-}
-.tag.tag-gr {
-  border-color: #68a4fe;
-  color: #68a4fe;
-}
-.tag.tag-sp {
-  border-color: #ffcd32;
-  color: #ffcd32;
-}
-.tag.tag-bdr {
-  border-color: #00afe3;
-  color: #00afe3;
+@each $color, $value in $tagColors {
+  .tag[class*='#{$color}'] {
+    @include tagStyle($value);
+  }
 }
 
 .arrow-btns {
