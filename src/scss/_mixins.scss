@@ -1,0 +1,11 @@
+@mixin bgCenter($url) {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url($url);
+}
+
+@mixin tagStyle($color) {
+  border-color: $color;
+  color: $color;
+}
