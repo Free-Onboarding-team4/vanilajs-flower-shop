@@ -28,23 +28,25 @@ function handleScroll() {
 function handleScrollUp(startPoint, endPoint) {
   var distance = startPoint + 1;
   var scroller = setInterval(function () {
-    distance -= Math.ceil(distance * 0.05);
-    window.scrollTo(0, distance);
-    if (distance <= endPoint) {
+    if (distance <= endPoint + 1) {
       clearInterval(scroller);
+      window.scrollTo(0, endPoint);
       return;
     }
+    distance -= Math.ceil(distance * 0.05);
+    window.scrollTo(0, distance);
   }, 5);
 }
 function handleScrollDown(startPoint, endPoint) {
   var distance = startPoint + 1;
   var scroller = setInterval(function () {
-    distance += Math.ceil(distance * 0.05);
-    window.scrollTo(0, distance);
     if (distance >= endPoint) {
       clearInterval(scroller);
+      window.scrollTo(0, endPoint);
       return;
     }
+    distance += Math.ceil(distance * 0.05);
+    window.scrollTo(0, distance);
   });
 }
 
