@@ -9,3 +9,19 @@
   border-color: $color;
   color: $color;
 }
+
+@mixin responsie($device) {
+  @if $device == 'large' {
+    @media screen and (max-width: 1200px) {
+      @content;
+    }
+  } @else if $device == 'medium' {
+    @media screen and (max-width: 1000px) {
+      @content;
+    }
+  } @else if $device == 'small' {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  }
+}

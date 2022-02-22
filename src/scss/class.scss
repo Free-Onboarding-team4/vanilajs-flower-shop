@@ -119,6 +119,9 @@ section {
     font-weight: 700;
     letter-spacing: -0.3px;
     margin-bottom: 3px;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .price {
@@ -171,6 +174,7 @@ section {
     height: 70px;
     border-radius: 100%;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s ease-in-out;
     cursor: pointer;
 
     &.btn-prev {
@@ -186,6 +190,13 @@ section {
     img {
       height: 30px;
       opacity: 0.2;
+    }
+
+    &:hover {
+      transform: scale(1.13);
+      img {
+        opacity: 0.4;
+      }
     }
   }
 }
