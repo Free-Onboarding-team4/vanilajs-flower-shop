@@ -4,20 +4,21 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   top: 0;
   height: 100px;
   width: 100vw;
+  z-index: 10;
   background-color: #ffffff;
 }
 
 .gnbNav.scrolled {
   -webkit-box-shadow: 0px 1px 3px 0px rgba(255, 202, 67, 0.7);
-  box-shadow: 0px 1px 3px 0px rgba(255, 202, 67, 0.7);
+          box-shadow: 0px 1px 3px 0px rgba(255, 202, 67, 0.7);
 }
 
 .gnbUl {
@@ -25,8 +26,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 90px;
   width: 1120px;
 }
@@ -57,7 +58,7 @@
 }
 
 .gnbLi > a:hover::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -14px;
   left: 0;
@@ -71,8 +72,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-left: auto;
   width: 90px;
 }
@@ -83,4 +84,6 @@
 
 .test {
   height: 1900px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#fbc2eb), to(#a6c1ee));
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }

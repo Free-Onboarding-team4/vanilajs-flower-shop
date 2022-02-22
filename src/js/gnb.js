@@ -55,5 +55,7 @@ function handleClickToScroll(e) {
     return;
   }
 }
-gnbLis.forEach(li => li.addEventListener('click', handleClickToScroll));
+for (let i = 0; i < gnbLis.length; i++) {
+  gnbLis[i].addEventListener('click', handleClickToScroll);
+}
 window.addEventListener('scroll', handleScroll);
