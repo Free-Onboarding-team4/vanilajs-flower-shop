@@ -10,13 +10,13 @@
   color: $color;
 }
 
-@mixin responsie($device) {
+@mixin responsive($device) {
   @if $device == 'large' {
     @media screen and (max-width: 1200px) {
       @content;
     }
   } @else if $device == 'medium' {
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1023px) {
       @content;
     }
   } @else if $device == 'small' {

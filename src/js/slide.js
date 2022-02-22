@@ -57,8 +57,8 @@ function printInfo() {
     var thumbnail = subClass[i].querySelector('.thumbnail');
     var subClassName = subClass[i].querySelector('.class-info .name a');
     var price = subClass[i].querySelector('.class-info .price');
-    var info = classInfo[i + 1];
     var branch = subClass[i].querySelector('.branch-tag');
+    var info = classInfo[i + 1];
 
     thumbnail.href = info.link;
     thumbnail.children[0].style.backgroundImage = 'url(' + info.image + ')';
