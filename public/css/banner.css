@@ -28,7 +28,6 @@ article {
   -webkit-transition: background-size 0.3s ease-in-out;
   transition: background-size 0.3s ease-in-out;
 }
-
 article:hover {
   background-size: 140%;
 }
