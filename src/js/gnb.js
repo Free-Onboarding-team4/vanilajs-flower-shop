@@ -1,12 +1,14 @@
 var gnbNav = document.querySelector('.gnbNav');
 var gnbLis = document.querySelectorAll('.gnbLi');
 var mobileLis = document.querySelectorAll('.mobileLi');
+var video = document.querySelector('.video-container');
+var flowerClass = document.querySelector('.container');
 
 function handleScroll() {
   const bodyCoords = document.body.getBoundingClientRect();
   const bodyWidth = bodyCoords.width;
   if (bodyWidth <= 1024) {
-    if (window.scrollY >= 52) {
+    if (window.scrollY >= gnbNav.offsetHeight) {
       gnbNav.classList.add('scrolled');
       document.body.style.paddingTop = gnbNav.offsetHeight + 'px';
     } else {
@@ -14,7 +16,7 @@ function handleScroll() {
       document.body.style.paddingTop = 0;
     }
   } else {
-    if (window.scrollY > 1) {
+    if (window.scrollY >= 1) {
       gnbNav.classList.add('scrolled');
     } else {
       gnbNav.classList.remove('scrolled');
@@ -49,22 +51,21 @@ function handleScrollDown(startPoint, endPoint) {
 function handleClickToScroll(e) {
   e.preventDefault();
   var startPoint = window.scrollY;
-  //   var videoCoords = video.getBoundingClientRect();
-  //   var classCoords = flowerClass.getBoundingClientRect();
+
   if (e.target.innerText === '동영상') {
-    // var toScrollY = videoCoords.y;
-    if (startPoint < 500) {
-      handleScrollDown(startPoint, 500);
+    var toScrollY = video.offsetTop - gnbNav.offsetHeight - 10;
+    if (startPoint < toScrollY) {
+      handleScrollDown(startPoint, toScrollY);
     } else {
-      handleScrollUp(startPoint, 500);
+      handleScrollUp(startPoint, toScrollY);
     }
   }
   if (e.target.innerText === '플라워클래스') {
-    // var toScrollY = classCoords.y;
-    if (startPoint < 900) {
-      handleScrollDown(startPoint, 900);
+    var toScrollY = flowerClass.offsetTop - gnbNav.offsetHeight - 90;
+    if (startPoint < toScrollY) {
+      handleScrollDown(startPoint, toScrollY);
     } else {
-      handleScrollUp(startPoint, 900);
+      handleScrollUp(startPoint, toScrollY);
     }
     return;
   }
