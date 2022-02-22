@@ -3,8 +3,30 @@
 @import url(banner.css);
 @import url(footer.css);
 @import url(modal.css);
-section {
+main {
+  margin-top: 140px;
+}
+
+@media screen and (max-width: 1023px) {
+  main {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    margin-top: 50px;
+  }
+}
+
+section:not(:first-child) {
   margin-top: 90px;
+}
+
+@media screen and (max-width: 768px) {
+  section:not(:first-child) {
+    margin-top: 50px;
+  }
 }
 
 .container {
@@ -18,10 +40,6 @@ section {
   .container {
     padding: 0 20px;
   }
-}
-
-main {
-  margin-top: 140px;
 }
 
 #video-section > div {

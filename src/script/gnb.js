@@ -51,12 +51,12 @@ function handleScrollDown(startPoint, endPoint) {
     }
     distance += Math.ceil(distance * 0.05);
     window.scrollTo(0, distance);
-  }, 5);
+  });
 }
 
 function handleClickToScroll(e) {
   e.preventDefault();
-  var startPoint = window.scrollY;
+  var startPoint = window.pageYOffset;
 
   if (e.target.innerText === '동영상') {
     var toScrollY = video.offsetTop - gnbNav.offsetHeight - 10;

@@ -5,8 +5,21 @@
 @import url(modal.css);
 @import './mixins';
 
-section {
+main {
+  margin-top: 140px;
+  @include responsive(medium) {
+    margin-top: 100px;
+  }
+  @include responsive(small) {
+    margin-top: 50px;
+  }
+}
+
+section:not(:first-child) {
   margin-top: 90px;
+  @include responsive(small) {
+    margin-top: 50px;
+  }
 }
 
 .container {
@@ -18,10 +31,6 @@ section {
   @include responsive(medium) {
     padding: 0 20px;
   }
-}
-
-main {
-  margin-top: 140px;
 }
 
 #video-section > div {
