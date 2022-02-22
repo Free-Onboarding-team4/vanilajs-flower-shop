@@ -10,7 +10,7 @@ function closeWin() {
 }
 
 function setCookie(name, value, expiredays) {
-  var todayDate = new Date();
+  const todayDate = new Date();
   todayDate.setDate(todayDate.getDate() + expiredays);
   document.cookie =
     name +
@@ -30,10 +30,11 @@ function checkCookie() {
 }
 
 function getCookie(name) {
-  var nameOfCookie = name + '=';
-  var x = 0;
+  const nameOfCookie = name + '=';
+  const endOfCookie = '';
+  let x = 0;
   while (x <= document.cookie.length) {
-    var y = x + nameOfCookie.length;
+    const y = x + nameOfCookie.length;
     if (document.cookie.substring(x, y) == nameOfCookie) {
       if ((endOfCookie = document.cookie.indexOf(';', y)) == -1)
         endOfCookie = document.cookie.length;

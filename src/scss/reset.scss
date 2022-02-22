@@ -14,13 +14,6 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 16px;
 }
-header,
-nav,
-article,
-section,
-footer {
-  display: block;
-}
 h1,
 h2,
 h3,
@@ -61,6 +54,9 @@ textarea {
   background: none;
   line-height: 1;
   font: inherit;
+}
+img {
+  border: none;
 }
 .sr-only {
   position: absolute;

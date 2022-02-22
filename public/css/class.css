@@ -1,14 +1,3 @@
-section {
-  margin-top: 90px;
-}
-
-.container {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 60px;
-  position: relative;
-}
-
 .section-title {
   display: -webkit-box;
   display: -ms-flexbox;

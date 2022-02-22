@@ -28,6 +28,7 @@ function checkCookie() {
 function getCookie(name) {
   var nameOfCookie = name + '=';
   var x = 0;
+  var endOfCookie = '';
   while (x <= document.cookie.length) {
     var y = x + nameOfCookie.length;
     if (document.cookie.substring(x, y) == nameOfCookie) {
