@@ -8,11 +8,11 @@
   z-index: 9999;
 }
 
-.modal-img {
+.modal .modal-img {
   width: 450px;
 }
 
-.modal-info {
+.modal .modal-info {
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -21,9 +21,16 @@
   background-color: black;
 }
 
-.checkbox,
-.modal-check,
-.modal-close {
+.modal .checkbox,
+.modal .modal-check,
+.modal .modal-close {
   cursor: pointer;
   color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    left: 0;
+    margin-left: 20px;
+  }
 }

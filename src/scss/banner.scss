@@ -72,3 +72,9 @@ article {
   line-height: 34px;
   font-weight: 400;
 }
+
+@include responsive(small) {
+  .banner-desc {
+    font-size: 10px;
+  }
+}
