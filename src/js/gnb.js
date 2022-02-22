@@ -1,11 +1,25 @@
 var gnbNav = document.querySelector('.gnbNav');
 var gnbLis = document.querySelectorAll('.gnbLi');
+var mobileLis = document.querySelectorAll('.mobileLi');
 
 function handleScroll() {
-  if (window.scrollY > 1) {
-    gnbNav.classList.add('scrolled');
+  const bodyCoords = document.body.getBoundingClientRect();
+  const bodyWidth = bodyCoords.width;
+  if (bodyWidth <= 1024) {
+    if (window.scrollY >= 52) {
+      gnbNav.classList.add('scrolled');
+      document.body.style.paddingTop = gnbNav.offsetHeight + 'px';
+    } else {
+      gnbNav.classList.remove('scrolled');
+      document.body.style.paddingTop = 0;
+    }
   } else {
-    gnbNav.classList.remove('scrolled');
+    if (window.scrollY > 1) {
+      gnbNav.classList.add('scrolled');
+    } else {
+      gnbNav.classList.remove('scrolled');
+      document.body.style.paddingTop = 0;
+    }
   }
 }
 
@@ -58,5 +72,8 @@ function handleClickToScroll(e) {
 
 for (let i = 0; i < gnbLis.length; i++) {
   gnbLis[i].addEventListener('click', handleClickToScroll);
+}
+for (let i = 0; i < mobileLis.length; i++) {
+  mobileLis[i].addEventListener('click', handleClickToScroll);
 }
 window.addEventListener('scroll', handleScroll);
