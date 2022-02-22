@@ -72,3 +72,9 @@ article .banner-bg:hover {
   line-height: 34px;
   font-weight: 400;
 }
+
+@media screen and (max-width: 768px) {
+  .banner-desc {
+    font-size: 10px;
+  }
+}
