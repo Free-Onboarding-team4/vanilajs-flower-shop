@@ -21,6 +21,7 @@
     <script src="../src/js/index.js" defer></script>
     <script src="../src/js/gnb.js" defer></script>
     <script src="../src/js/slide.js" defer></script>
+    <script src="../src/js/modal.js" defer></script>
   </head>
   <body>
     <div>
@@ -153,20 +154,28 @@
     <!-- banner section -->
     <section id="banner-section">
       <article class="left-banner">
-        <strong class="banner-name">꾸까 브랜드 이야기</strong>
-        <b class="banner-desc">꽃으로 라이프스타일을 만들어가는 </b
-        ><b class="banner-desc">kukka의 문화를 소개해요.</b
-        ><span class="banner-more">Brand story</span>
+        <span class="banner-bg"></span>
+        <div class="banner-text">
+          <strong class="banner-name">꾸까 브랜드 이야기</strong>
+          <b class="banner-desc">꽃으로 라이프스타일을 만들어가는 </b>
+          <b class="banner-desc">kukka의 문화를 소개해요.</b>
+          <span class="banner-more">Brand story</span>
+        </div>
       </article>
       <article class="right-banner">
-        <strong class="banner-name">꾸까 오프라인 쇼룸</strong>
-        <b class="banner-desc">꽃을 가까이서 만져보고 향기도 맡아보고, </b>
-        <b class="banner-desc"
-          >꽃 속에서 작은 휴식을 누릴 수 있는 kukka의 오프라인 쇼룸</b
-        ><span class="banner-more">꾸까 쇼룸 안내</span>
+        <span class="banner-bg"></span>
+        <div class="banner-text">
+          <strong class="banner-name">꾸까 오프라인 쇼룸</strong>
+          <b class="banner-desc">꽃을 가까이서 만져보고 향기도 맡아보고,</b>
+          <b class="banner-desc">
+            꽃 속에서 작은 휴식을 누릴 수 있는 kukka의 오프라인 쇼룸
+          </b>
+          <span class="banner-more">꾸까 쇼룸 안내</span>
+        </div>
       </article>
     </section>
     <!-- // banner section -->
+    <!-- footer -->
     <footer class="footer">
       <div class="footer-top">
         <div>
@@ -223,5 +232,24 @@
         </div>
       </div>
     </footer>
+    <!-- // footer -->
+    <!-- modal section -->
+    <section id="modal" class="modal">
+      <img
+        class="modal-img"
+        src="https://kukka-2-media-123.s3.amazonaws.com/media/class-name/ContentsPopups/11/20220221_%EB%B0%B0%EC%86%A1%EC%95%88%EB%82%B4.png"
+        alt="모달창"
+      />
+      <div class="modal-info">
+        <div class="input-box">
+          <span class="modal-check">
+            <input id="popup_close_check" class="checkbox" type="checkbox" />
+            오늘은 더 이상 보지 않기</span
+          >
+        </div>
+        <button onclick="javascript:closeWin();" class="modal-close">X</button>
+      </div>
+    </section>
+    <!-- // modal section -->
   </body>
 </html>
