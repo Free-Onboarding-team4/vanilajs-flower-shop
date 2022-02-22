@@ -1,3 +1,5 @@
+'use strict';
+
 document.addEventListener('DOMContentLoaded', function () {
   checkCookie();
 });
@@ -10,15 +12,9 @@ function closeWin() {
 }
 
 function setCookie(name, value, expiredays) {
-  const todayDate = new Date();
+  var todayDate = new Date();
   todayDate.setDate(todayDate.getDate() + expiredays);
-  document.cookie =
-    name +
-    '=' +
-    escape(value) +
-    '; path=/; expires=' +
-    todayDate.toGMTString() +
-    ';';
+  document.cookie = name + '=' + escape(value) + '; path=/; expires=' + todayDate.toGMTString() + ';';
 }
 
 function checkCookie() {
@@ -30,14 +26,13 @@ function checkCookie() {
 }
 
 function getCookie(name) {
-  const nameOfCookie = name + '=';
-  const endOfCookie = '';
-  let x = 0;
+  var nameOfCookie = name + '=';
+  var x = 0;
+  var endOfCookie = '';
   while (x <= document.cookie.length) {
-    const y = x + nameOfCookie.length;
+    var y = x + nameOfCookie.length;
     if (document.cookie.substring(x, y) == nameOfCookie) {
-      if ((endOfCookie = document.cookie.indexOf(';', y)) == -1)
-        endOfCookie = document.cookie.length;
+      if ((endOfCookie = document.cookie.indexOf(';', y)) == -1) endOfCookie = document.cookie.length;
       return unescape(document.cookie.substring(y, endOfCookie));
     }
     x = document.cookie.indexOf(' ', x) + 1;

@@ -24,10 +24,18 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <script src="../src/js/index.js" defer></script>
-    <script src="../src/js/gnb.js" defer></script>
-    <script src="../src/js/slide.js" defer></script>
-    <script src="../src/js/modal.js" defer></script>
+    <script src="../src/script/gnb.js" defer></script>
+    <script src="../src/script/slide.js" defer></script>
+    <script src="../src/script/modal.js" defer></script>
+    <!--[if lt IE 9
+      ]><script src="../src/script/cross/html5shiv.js"></script
+    ><![endif]-->
+    <!--[if lt IE 9
+      ]><script src="../src/script/cross/ie9.min.js"></script
+    ><![endif]-->
+    <!--[if lt IE 9
+      ]><script src="../src/script/cross/respond.js"></script
+    ><![endif]-->
   </head>
   <body>
     <div>
@@ -91,96 +99,104 @@
       </li>
     </ul>
 
-    <div class="video-container">
-      <iframe
-        class="video"
-        src="https://www.youtube.com/embed/FiZI8xd3qoY?autoplay=1&mute=1"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-    </div>
+    <main>
+      <!-- video section -->
+      <section id="video-section">
+        <div class="container">
+          <iframe
+            class="video"
+            src="https://www.youtube.com/embed/FiZI8xd3qoY?autoplay=1&mute=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+      <!-- //video section -->
 
-    <section id="class-section">
-      <div class="container">
-        <div class="section-title">
-          <h2 class="title">꽃과 함께 하는 일상, <b>플라워클래스</b></h2>
-          <a href="#" class="btn-more">더보기</a>
+      <!-- class section -->
+      <section id="class-section">
+        <div class="container">
+          <div class="section-title">
+            <h2 class="title">꽃과 함께 하는 일상, <b>플라워클래스</b></h2>
+            <a href="#" class="btn-more">더보기</a>
+          </div>
+          <div class="section-contents">
+            <a href="#" class="main-class">
+              <p class="main-class-txt">
+                매주 새로운 커리큘럼으로 배우는
+                <b>
+                  <span></span> 자세히 보기
+                  <img src="../src/images/arrow-right.png" />
+                </b>
+              </p>
+            </a>
+            <ul class="sub-class-container">
+              <li class="sub-class">
+                <a href="#" class="thumbnail">
+                  <span></span>
+                </a>
+                <div class="class-info">
+                  <p class="name">
+                    <a href="#"></a>
+                  </p>
+                  <span class="price"></span>
+                  <ul class="branch-tag"></ul>
+                </div>
+              </li>
+              <li class="sub-class">
+                <a href="#" class="thumbnail">
+                  <span></span>
+                </a>
+                <div class="class-info">
+                  <p class="name">
+                    <a href="#"></a>
+                  </p>
+                  <span class="price"></span>
+                  <ul class="branch-tag"></ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="arrow-btns">
+            <button class="btn btn-prev">
+              <img src="../src/images/arrow-left.png" />
+            </button>
+            <button class="btn btn-next">
+              <img src="../src/images/arrow-right.png" />
+            </button>
+          </div>
         </div>
-        <div class="section-contents">
-          <a href="#" class="main-class">
-            <p class="main-class-txt">
-              매주 새로운 커리큘럼으로 배우는
-              <b>
-                <span></span> 자세히 보기
-                <img src="../src/images/arrow-right.png" />
-              </b>
-            </p>
-          </a>
-          <ul class="sub-class-container">
-            <li class="sub-class">
-              <a href="#" class="thumbnail">
-                <span></span>
-              </a>
-              <div class="class-info">
-                <p class="name">
-                  <a href="#"></a>
-                </p>
-                <span class="price"></span>
-                <ul class="branch-tag"></ul>
-              </div>
-            </li>
-            <li class="sub-class">
-              <a href="#" class="thumbnail">
-                <span></span>
-              </a>
-              <div class="class-info">
-                <p class="name">
-                  <a href="#"></a>
-                </p>
-                <span class="price"></span>
-                <ul class="branch-tag"></ul>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="arrow-btns">
-          <button class="btn btn-prev">
-            <img src="../src/images/arrow-left.png" />
-          </button>
-          <button class="btn btn-next">
-            <img src="../src/images/arrow-right.png" />
-          </button>
-        </div>
-      </div>
-    </section>
-    <!-- // class section -->
+      </section>
+      <!-- // class section -->
 
-    <!-- banner section -->
-    <section id="banner-section">
-      <article class="left-banner">
-        <span class="banner-bg"></span>
-        <div class="banner-text">
-          <strong class="banner-name">꾸까 브랜드 이야기</strong>
-          <b class="banner-desc">꽃으로 라이프스타일을 만들어가는 </b>
-          <b class="banner-desc">kukka의 문화를 소개해요.</b>
-          <span class="banner-more">Brand story</span>
-        </div>
-      </article>
-      <article class="right-banner">
-        <span class="banner-bg"></span>
-        <div class="banner-text">
-          <strong class="banner-name">꾸까 오프라인 쇼룸</strong>
-          <b class="banner-desc">꽃을 가까이서 만져보고 향기도 맡아보고,</b>
-          <b class="banner-desc">
-            꽃 속에서 작은 휴식을 누릴 수 있는 kukka의 오프라인 쇼룸
-          </b>
-          <span class="banner-more">꾸까 쇼룸 안내</span>
-        </div>
-      </article>
-    </section>
-    <!-- // banner section -->
+      <!-- banner section -->
+      <section id="banner-section">
+        <article class="left-banner">
+          <span class="banner-bg"></span>
+          <div class="banner-text">
+            <strong class="banner-name">꾸까 브랜드 이야기</strong>
+            <b class="banner-desc">꽃으로 라이프스타일을 만들어가는 </b>
+            <b class="banner-desc">kukka의 문화를 소개해요.</b>
+            <span class="banner-more">Brand story</span>
+          </div>
+        </article>
+        <article class="right-banner">
+          <span class="banner-bg"></span>
+          <div class="banner-text">
+            <strong class="banner-name">꾸까 오프라인 쇼룸</strong>
+            <b class="banner-desc">꽃을 가까이서 만져보고 향기도 맡아보고,</b>
+            <b class="banner-desc">
+              꽃 속에서 작은 휴식을 누릴 수 있는 kukka의 오프라인 쇼룸
+            </b>
+            <span class="banner-more">꾸까 쇼룸 안내</span>
+          </div>
+        </article>
+      </section>
+      <!-- // banner section -->
+    </main>
+
     <!-- footer -->
     <footer class="footer">
       <div class="footer-top">
@@ -239,6 +255,7 @@
       </div>
     </footer>
     <!-- // footer -->
+
     <!-- modal section -->
     <section id="modal" class="modal">
       <img

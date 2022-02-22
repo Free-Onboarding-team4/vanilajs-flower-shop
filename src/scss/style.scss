@@ -1,6 +1,30 @@
-@import url(./gnb.css);
-@import './class.css';
+@import url(gnb.css);
+@import url(class.css);
 @import url(banner.css);
-@import './video.css';
-@import './footer.css';
+@import url(footer.css);
 @import url(modal.css);
+@import url(cross.css);
+
+section {
+  margin-top: 90px;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 60px;
+  position: relative;
+}
+
+main {
+  margin-top: 140px;
+}
+
+#video-section > div {
+  display: flex;
+  justify-content: center;
+}
+.video {
+  width: 890px;
+  height: 500px;
+}
