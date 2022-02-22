@@ -1,0 +1,112 @@
+.footer {
+  width: 100%;
+  padding: 80px 250px;
+  color: #f7f7f7;
+  background-color: #222222;
+}
+
+.footer-top{
+  display: flex;
+  justify-content: space-between;
+  .footer-logo{
+    width: 160px;
+    height: 70px;
+    display: inline-block;
+    background-image: url("../../src/images/kukka.png");
+    background-position: 2px -608px;
+    background-size: 1252px 845px;
+  }
+}
+
+.footer-bottom{
+  &::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #9b9b9b;
+    margin: 20px 0;
+  }
+}
+
+
+.icon-container{
+  display: flex;
+  a{
+    margin-right: 10px;
+  }
+}
+.facebook{
+  &::before {
+    content: "";
+    display: inline-block;
+    background-image: url("../../src/images/kukka.png");
+    background-position: -42px -775px;
+    width: 32px;
+    height: 32px;
+    background-size: 1252px 845px;
+  }
+}
+.instagram{
+  &::before{
+    content: "";
+    display: inline-block;
+    background-image: url("../../src/images/kukka.png");
+    background-position: -1214px -438px;
+    width: 32px;
+    height: 32px;
+    background-size: 1252px 845px;
+  }
+}
+.youtube{
+  &::before{
+    content: "";
+    display: inline-block;
+    background-image: url("../../src/images/kukka.png");
+    background-position: -1164px -685px;
+    width: 32px;
+    height: 32px;
+    background-size: 1252px 845px;
+  }
+}
+
+.qna{
+  position: relative;
+  display: flex;
+  align-items: center;
+  dt, dd{
+    font-size: 22px;
+    margin-right: 15px;
+  }
+  small{
+    display: flex;
+    align-items: center;
+    opacity: 0.7;
+    font-size: 13px;
+  }
+}
+.qna-btn{
+  padding: 0 20px;
+  border: #9b9b9b 1px solid;
+  border-radius: 18px;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 36px;
+  font-weight: 300;
+}
+
+.dd-container{
+  display: flex;
+  font-size: 14px;
+  dd:not(:last-child)::after{
+    content: "|";
+    display: inline-block;
+    margin: 0 10px;
+  }
+}
+
+.about{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
