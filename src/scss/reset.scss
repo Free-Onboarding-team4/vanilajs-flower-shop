@@ -24,6 +24,13 @@ b {
   font-size: 100%;
   font: inherit;
 }
+header,
+nav,
+section,
+article,
+footer {
+  display: block;
+}
 ul,
 li {
   list-style: none;

@@ -197,9 +197,6 @@
 }
 
 @include responsive(medium) {
-  .container {
-    padding: 0 20px;
-  }
   .section-title {
     margin-bottom: 20px;
     .title {
