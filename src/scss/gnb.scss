@@ -6,6 +6,7 @@
   top: 0;
   height: 100px;
   width: 100vw;
+  background-color: #ffffff;
 }
 .gnbNav.scrolled {
   box-shadow: 0px 1px 3px 0px rgba(255, 202, 67, 0.7);
@@ -56,4 +57,5 @@
 }
 .test {
   height: 1900px;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
