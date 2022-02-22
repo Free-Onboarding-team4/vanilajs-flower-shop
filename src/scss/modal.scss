@@ -1,0 +1,29 @@
+.modal {
+  display: none;
+  position: fixed;
+  width: 450px;
+  top: 10px;
+  left: 35%;
+  background-color: black;
+  z-index: 9999;
+}
+
+.modal-img {
+  width: 450px;
+}
+
+.modal-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+  background-color: black;
+}
+
+.checkbox,
+.modal-check,
+.modal-close {
+  cursor: pointer;
+  color: white;
+}
