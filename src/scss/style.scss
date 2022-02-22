@@ -3,21 +3,35 @@
 @import url(banner.css);
 @import url(footer.css);
 @import url(modal.css);
-@import url(cross.css);
+@import './mixins';
 
-section {
+main {
+  margin-top: 140px;
+  @include responsive(medium) {
+    margin-top: 100px;
+  }
+  @include responsive(small) {
+    margin-top: 50px;
+  }
+}
+
+section:not(:first-child) {
   margin-top: 90px;
+  @include responsive(small) {
+    margin-top: 50px;
+  }
 }
 
 .container {
+  width: 100%;
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 60px;
   position: relative;
-}
 
-main {
-  margin-top: 140px;
+  @include responsive(medium) {
+    padding: 0 20px;
+  }
 }
 
 #video-section > div {
@@ -27,4 +41,7 @@ main {
 .video {
   width: 890px;
   height: 500px;
+  @include responsive(medium) {
+    width: 100%;
+  }
 }

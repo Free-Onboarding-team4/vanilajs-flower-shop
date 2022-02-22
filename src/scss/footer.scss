@@ -1,68 +1,73 @@
+@import './mixins';
+
 .footer {
-  width: 100%;
-  padding: 80px 250px;
+  padding: 80px 0;
   color: #f7f7f7;
   background-color: #222222;
 }
 
-.footer-top{
+.footer-top {
   display: flex;
   justify-content: space-between;
-  .footer-logo{
+  .footer-logo {
     width: 160px;
     height: 70px;
     display: inline-block;
-    background-image: url("../../src/images/kukka.png");
+    background-image: url('../../src/images/kukka.png');
     background-position: 2px -608px;
     background-size: 1252px 845px;
+    align-self: flex-end;
+    @include responsive(large) {
+      display: none;
+    }
   }
 }
 
-.footer-bottom{
-  &::before{
-    content: "";
+.footer-bottom {
+  &::before {
+    content: '';
     display: block;
     width: 100%;
     height: 1px;
     background-color: #9b9b9b;
     margin: 20px 0;
+    opacity: 0.4;
   }
 }
 
-
-.icon-container{
+.icon-container {
   display: flex;
-  a{
+  a {
     margin-right: 10px;
   }
 }
-.facebook{
+.facebook {
   &::before {
-    content: "";
+    content: '';
     display: inline-block;
-    background-image: url("../../src/images/kukka.png");
+    background-image: url('../../src/images/kukka.png');
     background-position: -42px -775px;
     width: 32px;
     height: 32px;
     background-size: 1252px 845px;
   }
 }
-.instagram{
-  &::before{
-    content: "";
+.instagram {
+  &::before {
+    content: '';
     display: inline-block;
-    background-image: url("../../src/images/kukka.png");
+    background-image: url('../../src/images/kukka.png');
     background-position: -1214px -438px;
     width: 32px;
     height: 32px;
     background-size: 1252px 845px;
   }
 }
-.youtube{
-  &::before{
-    content: "";
+.youtube {
+  &::before {
+    content: '';
     display: inline-block;
-    background-image: url("../../src/images/kukka.png");
+    background-image: url('../../src/images/kukka.png');
     background-position: -1164px -685px;
     width: 32px;
     height: 32px;
@@ -70,22 +75,23 @@
   }
 }
 
-.qna{
+.qna {
   position: relative;
   display: flex;
   align-items: center;
-  dt, dd{
+  dt,
+  dd {
     font-size: 22px;
     margin-right: 15px;
   }
-  small{
+  small {
     display: flex;
     align-items: center;
     opacity: 0.7;
     font-size: 13px;
   }
 }
-.qna-btn{
+.qna-btn {
   padding: 0 20px;
   border: #9b9b9b 1px solid;
   border-radius: 18px;
@@ -95,18 +101,80 @@
   font-weight: 300;
 }
 
-.dd-container{
+.dd-container {
   display: flex;
   font-size: 14px;
-  dd:not(:last-child)::after{
-    content: "|";
+  dd:not(:last-child)::after {
+    content: '|';
     display: inline-block;
     margin: 0 10px;
   }
 }
 
-.about{
+.about {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+
+  dd {
+    opacity: 0.8;
+  }
+}
+
+.tems {
+  font-size: 14px;
+  a + a {
+    margin-left: 15px;
+  }
+}
+
+@include responsive(medium) {
+  .footer {
+    padding: 60px 0;
+  }
+  .footer-top {
+    position: relative;
+    margin-bottom: 70px;
+  }
+
+  .qna {
+    display: block;
+    font-size: 20px;
+    dt {
+      display: inline-block;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    span + dd {
+      display: inline-block;
+      font-size: 18px;
+    }
+    dd + dd {
+      display: block;
+    }
+    .sr-only {
+      display: none;
+    }
+  }
+
+  .qna + p {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .qna-btn {
+    position: absolute;
+    bottom: -80px;
+    line-height: 33px;
+  }
+
+  .about {
+    display: block;
+    dd {
+      font-size: 11px;
+    }
+    .tems {
+      margin-top: 20px;
+      font-size: 12px;
+    }
+  }
 }

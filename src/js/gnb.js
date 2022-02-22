@@ -34,7 +34,7 @@ function handleScrollUp(startPoint, endPoint) {
       window.scrollTo(0, endPoint);
       return;
     }
-    adder *= 1.1;
+    adder *= 1.08;
     distance -= adder;
     window.scrollTo(0, distance);
   }, 5);
@@ -54,7 +54,7 @@ function handleScrollDown(startPoint, endPoint) {
 
 function handleClickToScroll(e) {
   e.preventDefault();
-  var startPoint = window.scrollY;
+  var startPoint = window.pageYOffset;
 
   if (e.target.innerText === '동영상') {
     var toScrollY = video.offsetTop - gnbNav.offsetHeight - 10;

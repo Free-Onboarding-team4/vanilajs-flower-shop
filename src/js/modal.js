@@ -31,10 +31,10 @@ function checkCookie() {
 
 function getCookie(name) {
   const nameOfCookie = name + '=';
-  const endOfCookie = '';
   let x = 0;
   while (x <= document.cookie.length) {
     const y = x + nameOfCookie.length;
+    let endOfCookie = '';
     if (document.cookie.substring(x, y) == nameOfCookie) {
       if ((endOfCookie = document.cookie.indexOf(';', y)) == -1)
         endOfCookie = document.cookie.length;

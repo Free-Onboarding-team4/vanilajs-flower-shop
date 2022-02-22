@@ -29,6 +29,14 @@ b {
   font: inherit;
 }
 
+header,
+nav,
+section,
+article,
+footer {
+  display: block;
+}
+
 ul,
 li {
   list-style: none;
