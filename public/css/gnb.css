@@ -11,7 +11,7 @@
           align-items: flex-end;
   top: 0;
   height: 100px;
-  width: 100vw;
+  width: 100%;
   z-index: 1000;
   background-color: #ffffff;
   border-bottom: 1px solid #f4f4f4;
@@ -32,7 +32,7 @@
       -ms-flex-align: center;
           align-items: center;
   height: 90px;
-  width: 1120px;
+  width: 100%;
 }
 
 .gnbMenu,
@@ -96,7 +96,7 @@
 }
 
 .gnbLi > a:hover::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -14px;
   left: 0;
@@ -125,51 +125,40 @@
     position: relative;
     height: 52px;
   }
-
   .gnbNav.scrolled {
     position: fixed;
   }
-
   .gnbUl {
     height: 52px;
   }
-
   .logoBox {
     height: 35px;
   }
-
   .logoBox > a {
     height: 35px;
   }
-
   .mainLogo {
     display: none;
   }
-
   .mobileLogo {
     display: block;
     width: 187px;
   }
-
   .gnbMenu {
     display: none;
   }
-
   .mobileMenu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-
   .buttonBox {
     width: 21px;
     margin-right: 20px;
   }
-
   .buttonBox > a > img {
     width: 21px;
   }
-
   .userBtn {
     display: none;
   }

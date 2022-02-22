@@ -30,6 +30,7 @@ section:not(:first-child) {
 }
 
 .container {
+  width: 100%;
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 60px;
@@ -54,4 +55,10 @@ section:not(:first-child) {
 .video {
   width: 890px;
   height: 500px;
+}
+
+@media screen and (max-width: 1023px) {
+  .video {
+    width: 100%;
+  }
 }
