@@ -39,7 +39,6 @@ section {
 .section-contents {
   width: 100%;
   display: flex;
-
   & > * {
     flex-basis: 50%;
   }
@@ -164,6 +163,9 @@ section {
 }
 
 .arrow-btns {
+  @media screen and (max-width: 1340px) {
+    display: none;
+  }
   .btn {
     display: flex;
     justify-content: center;
@@ -196,6 +198,81 @@ section {
       transform: scale(1.13);
       img {
         opacity: 0.4;
+      }
+    }
+  }
+}
+
+@include responsive(medium) {
+  .container {
+    padding: 0 20px;
+  }
+  .section-title {
+    margin-bottom: 20px;
+    .title {
+      font-size: 22px;
+    }
+  }
+  .section-contents {
+    display: block;
+  }
+  .main-class {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 12px;
+    .main-class-txt {
+      font-size: 16px;
+      b {
+        font-size: 17px;
+        img {
+          height: 13px;
+        }
+      }
+    }
+  }
+  .sub-class {
+    &:last-child {
+      padding-top: 20px;
+      margin-top: 20px;
+    }
+    .thumbnail {
+      min-width: 144px;
+      span {
+        height: 110px;
+      }
+    }
+    .class-info {
+      .name {
+        font-size: 14px;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+@include responsive(small) {
+  .main-class {
+    height: 200px;
+    .main-class-txt {
+      left: 15px;
+      bottom: 15px;
+      font-size: 14px;
+      b {
+        margin-top: 5px;
+        font-size: 16px;
+      }
+    }
+  }
+  .sub-class {
+    .class-info {
+      .name {
+        margin-top: 0;
+      }
+      .branch-tag {
+        margin-top: 8px;
+        .tag {
+          padding: 5px 2px;
+        }
       }
     }
   }
