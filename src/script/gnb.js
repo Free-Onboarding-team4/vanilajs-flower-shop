@@ -3,8 +3,8 @@
 var gnbNav = document.querySelector('.gnbNav');
 var gnbLis = document.querySelectorAll('.gnbLi');
 var mobileLis = document.querySelectorAll('.mobileLi');
-var video = document.querySelector('.video-container');
-var flowerClass = document.querySelector('.container');
+var video = document.querySelector('#video-section');
+var flowerClass = document.querySelector('#class-section');
 
 function handleScroll() {
   var bodyCoords = document.body.getBoundingClientRect();
@@ -29,13 +29,15 @@ function handleScroll() {
 
 function handleScrollUp(startPoint, endPoint) {
   var distance = startPoint + 1;
+  var adder = 1;
   var scroller = setInterval(function () {
     if (distance <= endPoint + 1) {
       clearInterval(scroller);
       window.scrollTo(0, endPoint);
       return;
     }
-    distance -= Math.ceil(distance * 0.05);
+    adder *= 1.08;
+    distance -= adder;
     window.scrollTo(0, distance);
   }, 5);
 }
@@ -49,7 +51,7 @@ function handleScrollDown(startPoint, endPoint) {
     }
     distance += Math.ceil(distance * 0.05);
     window.scrollTo(0, distance);
-  });
+  }, 5);
 }
 
 function handleClickToScroll(e) {
