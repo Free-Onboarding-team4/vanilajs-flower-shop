@@ -17,7 +17,7 @@
   width: 160px;
   height: 70px;
   display: inline-block;
-  background-image: url("../../src/images/kukka.png");
+  background-image: url("../images/kukka.png");
   background-position: 2px -608px;
   background-size: 1252px 845px;
   -ms-flex-item-align: end;
@@ -53,7 +53,7 @@
 .facebook::before {
   content: '';
   display: inline-block;
-  background-image: url("../../src/images/kukka.png");
+  background-image: url("../images/kukka.png");
   background-position: -42px -775px;
   width: 32px;
   height: 32px;
@@ -63,7 +63,7 @@
 .instagram::before {
   content: '';
   display: inline-block;
-  background-image: url("../../src/images/kukka.png");
+  background-image: url("../images/kukka.png");
   background-position: -1214px -438px;
   width: 32px;
   height: 32px;
@@ -73,7 +73,7 @@
 .youtube::before {
   content: '';
   display: inline-block;
-  background-image: url("../../src/images/kukka.png");
+  background-image: url("../images/kukka.png");
   background-position: -1164px -685px;
   width: 32px;
   height: 32px;
